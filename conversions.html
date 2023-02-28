@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>conversions page   </title>
+    </head>
+ 
+<body>
+
+<h2>shows currency conversions Lakshmi Karthik Ravuri</h2>
+
+<form>
+    <label for="form1_age">Enter base amount </label>
+    <input type ="number" id="form1_age" name="form1_age" value=50> <br>
+
+    <label for="form1_nick">Enter the conversion rate </label>
+    <input type ="number" id="form1_nick" name="form1_nick" value=35 autofocus> <br>
+
+    <input type="button" onclick="convert()" value="Show conversions">
+</form>
+
+
+<p id="result">You can see conversion value here </p>
+
+<script> 
+
+function convert(){
+    toShow = ""
+    console.log("Getting form values")
+    amount = document.getElementById("form1_age").value
+    conversion_rate = document.getElementById("form1_nick").value
+    for(i=0; i<5; i++){
+        toShow = amount +" is "+ amount +":  "+
+                 amount*2+" is " +amount*conversion_rate + ": "+
+                 amount*4 +" is " +amount*conversion_rate + ": "+
+                 amount*8 +" is " +amount*conversion_rate + ": "+
+                 amount*16 + " is " +amount*conversion_rate + ": "
+        
+    }    
+    out = document.getElementById("result")
+    if(toShow){
+        out.innerHTML = "Conversions are: " + toShow
+    } 
+}
+</script>
+
+</body>
+</html> 
