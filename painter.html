@@ -26,8 +26,7 @@ function checkPainter (){
     console.log("Getting form values")
     hidden_painter = document.getElementById("form1_password").value
     guess_painter = document.getElementById("form1_painter").value
-    // confirmed = confirm("Are these the values? "+age+" and "+nick)
-    
+    // confirmed = confirm("Are these the values? "+age+" and "+nick) 
     out = document.getElementById("result")
     if(hidden_painter == guess_painter){
         good++
@@ -38,6 +37,8 @@ function checkPainter (){
         out.innerHTML = oops
         alert("Sorry")
     }
+    if(oops==10){
+    }
 }
 </script>
 <div class="container-fluid">
@@ -46,7 +47,6 @@ function checkPainter (){
 <script>
     useImage =1
     function selectImage(){
-
         switch(useImage){
             case 1:
                 document.getElementById("imqge").src="Ugni_molinae.jpg";
@@ -60,8 +60,6 @@ function checkPainter (){
                 document.getElementById("imqge").src="Inula.jpg";
                 useImage=1
                 break;
-    
-
         }
     }
 </script>
