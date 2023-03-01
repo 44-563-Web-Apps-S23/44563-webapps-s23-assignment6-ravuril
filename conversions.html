@@ -45,14 +45,13 @@ function convert(){
     console.log("Getting form values")
     amount = document.getElementById("form1_age").value
     conversion_rate = document.getElementById("form1_nick").value
-    // for(i=0; i<5; i++){
-    toShow = amount +" is "+ amount +";  "+
-                amount*2+" is " +Math.round((amount*conversion_rate*2)*10/10) + "; "+
-                amount*4 +" is " +Math.round((amount*conversion_rate*4)*10/10) + "; "+
-                amount*8 +" is " +Math.round((amount*conversion_rate*8) * 10)/10 + "; "+
-                amount*16 + " is " +Math.round((amount*conversion_rate*16)*10/10) + "; "
-        
-    // }    
+    var multiple = 1;
+    for(var i=0; i<5; i++){
+        let res=multiple*amount*conversion_rate;
+        res=Math.round(res*10)/10;
+        toShow+= " "+amount*multiple+" value is "+res+";"
+        multiple*=2;
+    }    
     out = document.getElementById("result")
     if(toShow){
         out.innerHTML = "Conversions are: " + toShow
