@@ -47,10 +47,10 @@ function convert(){
     conversion_rate = document.getElementById("form1_nick").value
     // for(i=0; i<5; i++){
     toShow = amount +" is "+ amount +";  "+
-                amount*2+" is " +amount*conversion_rate*2 + "; "+
-                amount*4 +" is " +amount*conversion_rate*4 + "; "+
-                amount*8 +" is " +amount*conversion_rate*8 + "; "+
-                amount*16 + " is " +amount*conversion_rate*16 + "; "
+                amount*2+" is " +Math.round((amount*conversion_rate*2)*10/10) + "; "+
+                amount*4 +" is " +Math.round((amount*conversion_rate*4)*10/10) + "; "+
+                amount*8 +" is " +Math.round((amount*conversion_rate*8) * 10)/10 + "; "+
+                amount*16 + " is " +Math.round((amount*conversion_rate*16)*10/10) + "; "
         
     // }    
     out = document.getElementById("result")
